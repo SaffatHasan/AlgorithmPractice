@@ -7,3 +7,6 @@
 [submodule "LongestCommonSubsequence"]
 	path = LongestCommonSubsequence
 	url = http://github.com/SaffatHasan/LongestCommonSubsequence
+[submodule "WildcardPatternMatching"]
+	path = WildcardPatternMatching
+	url = http://github.com/SaffatHasan/WildcardPatternMatching
