@@ -6,3 +6,7 @@ This repository is an aggregation of algorithm practice repositories.
 
 * Practice data structures & algorithms
 * Learn new languages
+
+## Useful Links
+
+* [Fucking Algorithm](https://github.com/labuladong/fucking-algorithm/tree/english)
