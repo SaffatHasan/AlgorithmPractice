@@ -4,3 +4,6 @@
 [submodule "KthOrderStatistic"]
 	path = KthOrderStatistic
 	url = http://github.com/SaffatHasan/KthOrderStatistic
+[submodule "LongestCommonSubsequence"]
+	path = LongestCommonSubsequence
+	url = http://github.com/SaffatHasan/LongestCommonSubsequence
