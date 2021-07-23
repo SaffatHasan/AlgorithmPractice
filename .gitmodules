@@ -14,3 +14,7 @@
 	path = WildcardPatternMatching
 	url = http://github.com/SaffatHasan/WildcardPatternMatching
 	branch = main
+[submodule "BestSlices"]
+	path = BestSlices
+	url = https://github.com/SaffatHasan/BestSlices.git
+	branch = main
