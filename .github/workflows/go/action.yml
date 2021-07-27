@@ -1,0 +1,14 @@
+name: 'verify'
+description: 'verifies a folder'
+inputs:
+  working-directory:
+    description: where to execute
+    required: true
+    default: '.'
+runs:
+  using: 'composite'
+  steps:
+    - run: echo "Hello World"
+      working-directory: ${{inputs.working-directory}}
+    - run: ls
+      working-directory: ${{inputs.working-directory}}
