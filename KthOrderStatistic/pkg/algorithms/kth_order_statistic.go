@@ -2,7 +2,7 @@ package algorithms
 
 import (
   "container/heap"
-  "github.com/SaffatHasan/KthOrderStatistic/pkg/datastructures"
+  "github.com/SaffatHasan/AlgorithmPractice/KthOrderStatistic/pkg/datastructures"
 )
 
 // given an input array and a k

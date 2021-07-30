@@ -1,4 +1,4 @@
-module github.com/SaffatHasan/WildCardPatternMatching
+module github.com/SaffatHasan/AlgorithmPractice/WildCardPatternMatching
 
 go 1.15
 

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/SaffatHasan/LongestCommonSubsequence/pkg/algorithm"
+	"github.com/SaffatHasan/AlgorithmPractice/LongestCommonSubsequence/pkg/algorithm"
 )
 
 func main() {

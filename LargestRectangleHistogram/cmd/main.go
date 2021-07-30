@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/SaffatHasan/LargestRectangleHistogram/pkg/algorithm"
+	"github.com/SaffatHasan/AlgorithmPractice/LargestRectangleHistogram/pkg/algorithm"
 )
 
 func main() {

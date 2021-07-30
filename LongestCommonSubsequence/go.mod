@@ -1,4 +1,4 @@
-module github.com/SaffatHasan/LongestCommonSubsequence
+module github.com/SaffatHasan/AlgorithmPractice/LongestCommonSubsequence
 
 go 1.15
 

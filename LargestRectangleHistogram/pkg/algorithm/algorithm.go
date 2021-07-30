@@ -1,7 +1,7 @@
 package algorithm
 
 import (
-	"github.com/SaffatHasan/LargestRectangleHistogram/pkg/model"
+	"github.com/SaffatHasan/AlgorithmPractice/LargestRectangleHistogram/pkg/model"
 )
 
 func LargestRectangleHistogram(arr []int) int {

@@ -1,4 +1,4 @@
-module github.com/SaffatHasan/LargestRectangleHistogram
+module github.com/SaffatHasan/AlgorithmPractice/LargestRectangleHistogram
 
 go 1.15
 

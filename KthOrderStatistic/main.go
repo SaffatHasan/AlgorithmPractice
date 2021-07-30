@@ -1,7 +1,7 @@
 package main
 
 import (
-  "github.com/SaffatHasan/KthOrderStatistic/pkg/algorithms"
+  "github.com/SaffatHasan/AlgorithmPractice/KthOrderStatistic/pkg/algorithms"
   "fmt"
 )
 func main() {

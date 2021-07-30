@@ -1,4 +1,4 @@
-module github.com/SaffatHasan/KthOrderStatistic
+module github.com/SaffatHasan/AlgorithmPractice/KthOrderStatistic
 
 go 1.14
 
