@@ -1,4 +1,4 @@
-# Best Slices ![go](https://github.com/SaffatHasan/BestSlices/actions/workflows/go.yml/badge.svg) ![golangci-lint](https://github.com/SaffatHasan/BestSlices/actions/workflows/golangci-lint.yml/badge.svg)
+# Best Slices
 
 ## Problem Statement
 

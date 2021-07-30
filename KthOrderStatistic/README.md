@@ -1,4 +1,4 @@
-# Kth Order Statistic ![go](https://github.com/SaffatHasan/KthOrderStatistic/actions/workflows/go.yml/badge.svg)  ![go](https://github.com/SaffatHasan/KthOrderStatistic/actions/workflows/golangci-lint.yml/badge.svg)
+# Kth Order Statistic
 
 The goal of this repository is to become familiar with
 - golang

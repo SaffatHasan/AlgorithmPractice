@@ -1,4 +1,4 @@
-# Largest Rectangle in Histogram  ![go](https://github.com/SaffatHasan/LargestRectangleHistogram/actions/workflows/go.yml/badge.svg)  ![go](https://github.com/SaffatHasan/LargestRectangleHistogram/actions/workflows/golangci-lint.yml/badge.svg)
+# Largest Rectangle in Histogram
 
 ## [Problem Description][1]
 

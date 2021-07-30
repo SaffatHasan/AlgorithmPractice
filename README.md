@@ -1,4 +1,4 @@
-# Algorithm Practice
+# Algorithm Practice ![go](https://github.com/SaffatHasan/AlgorithmPractice/actions/workflows/go.yml/badge.svg)
 
 This repository is an aggregation of algorithm practice repositories.
 

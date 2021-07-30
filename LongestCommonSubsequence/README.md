@@ -1,4 +1,4 @@
-# LongestCommonSubsequence ![go](https://github.com/SaffatHasan/LongestCommonSubsequence/actions/workflows/go.yml/badge.svg)
+# LongestCommonSubsequence
 
 
 ## [Problem Description][1]

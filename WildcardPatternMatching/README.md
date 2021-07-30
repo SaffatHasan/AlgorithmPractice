@@ -1,4 +1,4 @@
-# Wildcard Pattern Matching  ![go](https://github.com/SaffatHasan/WildcardPatternMatching/actions/workflows/go.yml/badge.svg) ![go](https://github.com/SaffatHasan/WildcardPatternMatching/actions/workflows/golangci-lint.yml/badge.svg)
+# Wildcard Pattern Matching
 
 ## [Problem Description][1]
 
