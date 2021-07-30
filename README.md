@@ -1,4 +1,4 @@
-# Algorithm Practice ![go](https://github.com/SaffatHasan/AlgorithmPractice/actions/workflows/go.yml/badge.svg)
+# Algorithm Practice ![go](https://github.com/SaffatHasan/AlgorithmPractice/actions/workflows/go.yml/badge.svg) ![lint](https://github.com/SaffatHasan/AlgorithmPractice/actions/workflows/golangci-lint.yml/badge.svg)
 
 This repository is an aggregation of algorithm practice repositories.
 
