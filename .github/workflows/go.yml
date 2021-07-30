@@ -2,24 +2,8 @@ name: Go
 on: [push]
 
 jobs:
-  prep:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.7'
-      - id: set-matrix
-        run: echo "::set-output name=matrix::$(python3 .github/workflows/print_dirs.py)"
-
-    outputs:
-      matrix: "${{ steps.set-matrix.outputs.matrix }}"
   verify:
-    needs: prep
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        module: ${{ fromJson(needs.prep.outputs.matrix) }}
     steps:
     - uses: actions/checkout@v2
 
@@ -29,9 +13,6 @@ jobs:
         go-version: 1.16
 
     - uses: golangci/golangci-lint-action@v2
-      with:
-        working-directory: ${{matrix.module}}
 
     - name: Test
       run: go test ./...
-      working-directory: ${{matrix.module}}

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/SaffatHasan/AlgorithmPractice/WildCardPatternMatching/pkg/algorithm"
+	"github.com/SaffatHasan/AlgorithmPractice/WildcardPatternMatching/pkg/algorithm"
 )
 
 func main() {
