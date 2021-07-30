@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/SaffatHasan/BestSlices/pkg/algorithm"
+	"github.com/SaffatHasan/AlgorithmPractice/BestSlices/pkg/algorithm"
 )
 
 func main() {
