@@ -1,10 +1,10 @@
-package model
+package binarytree
 
 const NIL_NODE int = -1
 
 type Node struct {
-	data        int
-	left, right *Node
+	Val         int
+	Left, Right *Node
 }
 
 // CreateTree generates a tree from an input array defined
@@ -14,10 +14,10 @@ func CreateTree(arr []int) *Node {
 	if len(arr) == 0 {
 		return nil
 	}
-	return CreateTreeHelper(arr, 0)
+	return createTreeHelper(arr, 0)
 }
 
-func CreateTreeHelper(arr []int, idx int) *Node {
+func createTreeHelper(arr []int, idx int) *Node {
 	if idx >= len(arr) || arr[idx] == NIL_NODE {
 		return nil
 	}
@@ -27,7 +27,7 @@ func CreateTreeHelper(arr []int, idx int) *Node {
 
 	return &Node{
 		arr[idx],
-		CreateTreeHelper(arr, leftIdx),
-		CreateTreeHelper(arr, rightIdx),
+		createTreeHelper(arr, leftIdx),
+		createTreeHelper(arr, rightIdx),
 	}
 }

@@ -1,26 +1,10 @@
-package model
+package binarytree
 
 import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
-
-// func TestEqualityOperatorWorksAsExpected(t *testing.T) {
-// 	treeA := Node{
-// 		left: &Node{nil, nil, 5},
-// 	}
-
-// 	treeB := Node{
-// 		left: &Node{nil, nil, 5},
-// 	}
-
-// 	assert.Equal(t, treeA, treeB)
-
-// 	treeA.right = &treeB
-
-// 	assert.NotEqual(t, treeA, treeB)
-// }
 
 func TestCreateTree(t *testing.T) {
 	testCases := []struct {
