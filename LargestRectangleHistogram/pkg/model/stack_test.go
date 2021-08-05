@@ -28,16 +28,21 @@ func TestStack(t *testing.T) {
 func TestStackLen(t *testing.T) {
 	s := Stack{}
 
-	assert.Equal(t, s.Len(), 0)
-	s.Push(1)
-	assert.Equal(t, s.Len(), 1)
-	s.Push(1)
-	assert.Equal(t, s.Len(), 2)
-	s.Pop()
-	assert.Equal(t, s.Len(), 1)
-	s.Pop()
-	assert.Equal(t, s.Len(), 0)
-	s.Pop()
+	num_elements_to_pop := 3
+
+	for i := 0; i < num_elements_to_pop; i++ {
+		assert.Equal(t, s.Len(), i)
+		s.Push(1)
+	}
+
+	assert.Equal(t, s.Len(), num_elements_to_pop)
+
+	for i := num_elements_to_pop; i > 0; i-- {
+		_, err := s.Pop()
+		assert.Nil(t, err)
+		assert.Equal(t, s.Len(), i-1)
+	}
+
 	assert.Equal(t, s.Len(), 0)
 }
 
@@ -50,6 +55,7 @@ func TestStackPeek(t *testing.T) {
 	s.Push(1)
 	assert.Equal(t, s.Peek(), 1)
 
-	s.Pop()
+	_, err := s.Pop()
 	assert.Equal(t, s.Peek(), 0)
+	assert.Nil(t, err)
 }
