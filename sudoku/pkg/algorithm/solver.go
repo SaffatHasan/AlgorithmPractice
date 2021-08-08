@@ -24,7 +24,7 @@ func Solve(b *model.Board) bool {
 	}
 
 	// unset and backtrack
-	b.SetVal(zeroCol, zeroRow, 0)
+	b.SetVal(zeroRow, zeroCol, 0)
 	return false
 }
 
