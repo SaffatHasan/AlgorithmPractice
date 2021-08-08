@@ -1,18 +1,45 @@
 package model
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Board struct {
 	data [9][9]int
 }
 
+func FromString(input string) *Board {
+	if len(input) != 81 {
+		return nil
+	}
+
+	b := Board{}
+
+	for idx, char := range input {
+		val := convertRuneToInt(char)
+
+		row, col := idx/9, idx%9
+		b.SetVal(row, col, val)
+	}
+
+	return &b
+}
+
+func convertRuneToInt(r rune) int {
+	return int(r - '0')
+}
+
+func (b *Board) SetVal(rowIndex int, colIndex int, value int) {
+	b.data[rowIndex][colIndex] = value
+}
+
 // returns the 0-index row
-func (b *Board) getRow(rowIndex int) [9]int {
+func (b *Board) GetRow(rowIndex int) [9]int {
 	return b.data[rowIndex]
 }
 
 // returns the 0-index column
-func (b *Board) getCol(colIndex int) (result [9]int) {
+func (b *Board) GetCol(colIndex int) (result [9]int) {
 	for rowIndex := 0; rowIndex < 9; rowIndex++ {
 		result[rowIndex] = b.data[rowIndex][colIndex]
 	}
@@ -25,12 +52,10 @@ func (b *Board) getCol(colIndex int) (result [9]int) {
 // 6 7 8
 func (b *Board) getBox(boxIndex int) (result [9]int) {
 	counter := 0
-	fmt.Printf("boxIndex: %v\n", boxIndex)
 	startRow := 3 * (boxIndex / 3)
 	startCol := 3 * (boxIndex % 3)
 	for rowIdx := startRow; rowIdx < startRow+3; rowIdx++ {
 		for colIdx := startCol; colIdx < startCol+3; colIdx++ {
-			fmt.Printf("(%v, %v)\n", rowIdx, colIdx)
 			result[counter] = b.data[rowIdx][colIdx]
 			counter++
 		}
@@ -38,12 +63,12 @@ func (b *Board) getBox(boxIndex int) (result [9]int) {
 	return
 }
 
-func (b *Board) isValid() bool {
+func (b *Board) IsValid() bool {
 	for idx := 0; idx < 9; idx++ {
-		if !isValid(b.getRow(idx)) {
+		if !isValid(b.GetRow(idx)) {
 			return false
 		}
-		if !isValid(b.getCol(idx)) {
+		if !isValid(b.GetCol(idx)) {
 			return false
 		}
 		if !isValid(b.getBox(idx)) {
@@ -80,7 +105,7 @@ func (b *Board) String() (result string) {
 		if rowIndex%3 == 0 {
 			result += separator
 		}
-		result += formatRow(rowString, b.getRow(rowIndex))
+		result += formatRow(rowString, b.GetRow(rowIndex))
 	}
 	result += separator
 	return

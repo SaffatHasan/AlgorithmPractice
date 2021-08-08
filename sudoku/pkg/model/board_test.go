@@ -10,7 +10,7 @@ func TestGetRow(t *testing.T) {
 	row := genSequentialArr()
 	board := genBoard(row)
 	for idx := 0; idx < 9; idx++ {
-		assert.Equal(t, row, board.getRow(idx))
+		assert.Equal(t, row, board.GetRow(idx))
 	}
 }
 
@@ -19,7 +19,7 @@ func TestGetCol(t *testing.T) {
 	board := genBoard(row)
 
 	for idx := 0; idx < 9; idx++ {
-		assert.Equal(t, genArrUsingConst(idx+1), board.getCol(idx))
+		assert.Equal(t, genArrUsingConst(idx+1), board.GetCol(idx))
 	}
 }
 
@@ -69,8 +69,23 @@ func genBox(boxIndex int) [9]int {
 
 func TestIsValid(t *testing.T) {
 	b := genBoard(genArrUsingConst(0))
-	assert.True(t, b.isValid())
+	assert.True(t, b.IsValid())
 
 	b = genBoard(genSequentialArr())
-	assert.False(t, b.isValid())
+	assert.False(t, b.IsValid())
+}
+
+func TestIsValidHelper(t *testing.T) {
+	testcases := []struct {
+		input    [9]int
+		expected bool
+	}{
+		{[9]int{1, 2, 3, 4, 5, 6, 7, 8, 9}, true},
+		{[9]int{9, 2, 3, 4, 5, 6, 7, 8, 9}, false},
+		{[9]int{1, 3, 3, 4, 5, 6, 7, 8, 9}, false},
+	}
+
+	for _, tc := range testcases {
+		assert.Equal(t, tc.expected, isValid(tc.input))
+	}
 }
