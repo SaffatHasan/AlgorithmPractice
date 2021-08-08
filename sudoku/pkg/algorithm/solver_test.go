@@ -30,3 +30,25 @@ func TestSolverWithUnsolvable(t *testing.T) {
 	b := model.FromString("999999999999999999999999999999999999999999999999999999999999999999999999999999999")
 	assert.False(t, Solve(b))
 }
+
+func TestSolvePuzzle(t *testing.T) {
+	// this puzzle has a unique solution
+	b := model.FromString("000260701680070090190004500820100040004602900050003028009300074040050036703018000")
+	assert.True(t, Solve(b), b.String())
+
+	solved := model.FromString("435269781682571493197834562826195347374682915951743628519326874248957136763418259")
+	assert.Equal(t, solved, b)
+
+}
+
+func TestFindZero(t *testing.T) {
+	b := model.FromString("099999999999999999999999999999999999999999999999999999999999999999999999999999999")
+	row, col := findZero(b)
+	assert.Equal(t, 0, row)
+	assert.Equal(t, 0, col)
+
+	b = model.FromString("999999999999999999999999999999999999999999999999999999999999999999999999999999999")
+	row, col = findZero(b)
+	assert.Equal(t, -1, row)
+	assert.Equal(t, -1, col)
+}
