@@ -15,14 +15,14 @@ type TestCase struct {
 
 func TestSearch(t *testing.T) {
 	for _, tc := range getCommonTestCases() {
-		assert.Equal(t, tc.expected, FindTotalBombsExploded(tc.input, tc.startBombIndex))
+		assert.Equal(t, tc.expected, FindTotalBombsExploded(tc.input, tc.startBombIndex), "Input: %+v", tc.input)
 	}
 }
 
 func TestSearchWithChannels(t *testing.T) {
 	t.SkipNow() // these tests deadlock
 	for _, tc := range getCommonTestCases() {
-		assert.Equal(t, tc.expected, FindTotalBombsExplodedHelper(tc.input, tc.startBombIndex, true))
+		assert.Equal(t, tc.expected, FindTotalBombsExplodedHelper(tc.input, tc.startBombIndex, true), "Input: %+v", tc.input)
 	}
 }
 
@@ -34,7 +34,7 @@ func getCommonTestCases() []TestCase {
 				{X: 0, Y: 0, R: 0},
 			},
 			0,
-			0,
+			1,
 		},
 		{
 			[]model.Bomb{
@@ -42,7 +42,7 @@ func getCommonTestCases() []TestCase {
 				{X: 0, Y: 1, R: 0},
 			},
 			0,
-			1,
+			2,
 		},
 	}
 }
