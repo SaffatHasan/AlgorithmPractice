@@ -71,10 +71,6 @@ func BFS(start model.Bomb, graph BombGraph, visited map[model.Bomb]bool) {
 
 // This deadlocks needs more research
 func BFSWithChannels(start model.Bomb, graph BombGraph, visited map[model.Bomb]bool) {
-	// edge case: disconnected graph
-	if len(graph[start]) == 0 {
-		return
-	}
 	queue := make(chan model.Bomb)
 
 	queue <- start
