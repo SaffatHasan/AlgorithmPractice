@@ -2,7 +2,7 @@ package algorithm
 
 // tc: O(n)
 // sc: O(n)
-func TwoSum(target int, nums []int) []int {
+func TwoSum(target int, nums []int) [2]int {
 	// store complementary values in map
 	// map[VALUE] = INDEX
 	// where nums[INDEX] = target - value
@@ -11,7 +11,7 @@ func TwoSum(target int, nums []int) []int {
 	for index, value := range nums {
 		if complementIndex, found := complementMap[value]; found {
 			// for current value we have an index for its complement
-			return []int{complementIndex, index}
+			return [2]int{complementIndex, index}
 		} else {
 			// calculate complement value
 			complement := target - value
@@ -19,5 +19,5 @@ func TwoSum(target int, nums []int) []int {
 		}
 	}
 	// no result found
-	return []int{}
+	return [2]int{}
 }
