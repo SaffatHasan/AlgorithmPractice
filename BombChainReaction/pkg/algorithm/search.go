@@ -8,10 +8,6 @@ type BombGraph map[model.Bomb][]model.Bomb
 
 // see README.md for problem description
 func FindTotalBombsExploded(bombs []model.Bomb, startBombIndex int) int {
-	return FindTotalBombsExplodedHelper(bombs, startBombIndex, false)
-}
-
-func FindTotalBombsExplodedHelper(bombs []model.Bomb, startBombIndex int, useChannels bool) int {
 	if startBombIndex > len(bombs) || startBombIndex < 0 {
 		return 0
 	}
@@ -19,11 +15,7 @@ func FindTotalBombsExplodedHelper(bombs []model.Bomb, startBombIndex int, useCha
 	graph := BuildGraph(bombs)
 	visited := make(map[model.Bomb]bool)
 
-	if useChannels {
-		BFSWithChannels(start, graph, visited)
-	} else {
-		BFS(start, graph, visited)
-	}
+	BFS(start, graph, visited)
 	return len(visited)
 }
 
@@ -66,26 +58,5 @@ func BFS(start model.Bomb, graph BombGraph, visited map[model.Bomb]bool) {
 			}
 			queue = append(queue, neighbor)
 		}
-	}
-}
-
-// This deadlocks needs more research
-func BFSWithChannels(start model.Bomb, graph BombGraph, visited map[model.Bomb]bool) {
-	queue := make(chan model.Bomb)
-
-	queue <- start
-
-	select {
-	case current := <-queue:
-		for _, neighbor := range graph[current] {
-			if visited[neighbor] {
-				continue
-			}
-			visited[neighbor] = true
-			queue <- neighbor
-		}
-	default:
-		close(queue)
-		return
 	}
 }

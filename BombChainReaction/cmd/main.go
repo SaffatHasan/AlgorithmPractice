@@ -9,8 +9,8 @@ import (
 
 func main() {
 	bombs := []model.Bomb{
-		{X: 0, Y: 0, R: 1},
-		{X: 0, Y: 1, R: 0},
+		{X: 0, Y: 0, R: 5},
+		{X: 0, Y: 1, R: 5},
 	}
 	startBombIndex := 0
 

@@ -19,13 +19,6 @@ func TestSearch(t *testing.T) {
 	}
 }
 
-func TestSearchWithChannels(t *testing.T) {
-	t.SkipNow() // these tests deadlock
-	for _, tc := range getCommonTestCases() {
-		assert.Equal(t, tc.expected, FindTotalBombsExplodedHelper(tc.input, tc.startBombIndex, true), "Input: %+v", tc.input)
-	}
-}
-
 func getCommonTestCases() []TestCase {
 	return []TestCase{
 		{
