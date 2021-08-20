@@ -1,2 +1,3 @@
+*.pyc
 cover.out
 coverage.html
